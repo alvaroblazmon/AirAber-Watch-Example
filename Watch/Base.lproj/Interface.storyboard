@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14313.18" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tig-oz-26Q">
+    <device id="watch42" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14238.10"/>
+    </dependencies>
+    <scenes>
+        <!--Flight-->
+        <scene sceneID="Hhq-3j-FJf">
+            <objects>
+                <controller identifier="Flight" id="5Kk-zi-gES" customClass="FlightInterfaceController" customModule="Watch_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="iAL-oO-MSH">
+                            <items>
+                                <imageView width="40" height="40" alignment="left" image="Logo" id="djA-op-sSG">
+                                    <color key="tintColor" red="0.98039215686274506" green="0.066666666666666666" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                                </imageView>
+                                <group alignment="left" layout="vertical" spacing="0.0" id="HUs-yC-6Xc">
+                                    <items>
+                                        <label alignment="left" text="Flight 123" id="stM-ek-R1x">
+                                            <color key="textColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label alignment="left" text="MEL to SFO" id="mlD-nM-ARK"/>
+                                    </items>
+                                </group>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="6" bottom="0.0"/>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" spacing="0.0" id="Dy7-Vs-guD">
+                            <items>
+                                <label alignment="left" text="AA123 Boards" id="v85-sh-XHh"/>
+                                <label height="44" alignment="left" text="15:06" id="rjL-bY-ppw">
+                                    <color key="textColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="54"/>
+                                </label>
+                                <label alignment="left" text="On time" id="bwQ-UE-PrY">
+                                    <color key="textColor" red="0.51764705879999995" green="0.64705882349999999" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </label>
+                                <group width="1" alignment="left" id="xEY-f7-aP0">
+                                    <items>
+                                        <label alignment="left" text="Gate 1A" id="jLM-KU-uU3"/>
+                                        <label alignment="right" text="Seat 64A" id="ud8-ix-Gka"/>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="boardTimeLabel" destination="rjL-bY-ppw" id="2sb-IY-UHg"/>
+                        <outlet property="boardingLabel" destination="v85-sh-XHh" id="hN2-om-gfe"/>
+                        <outlet property="flightLabel" destination="stM-ek-R1x" id="4lA-Ki-F0A"/>
+                        <outlet property="gateLabel" destination="jLM-KU-uU3" id="0we-Kp-xgg"/>
+                        <outlet property="routeLabel" destination="mlD-nM-ARK" id="n4k-GJ-J7g"/>
+                        <outlet property="seatLabel" destination="ud8-ix-Gka" id="fTe-Zm-mwL"/>
+                        <outlet property="statusLabel" destination="bwQ-UE-PrY" id="pbt-w2-7a7"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-34" y="-70"/>
+        </scene>
+        <!--Air Aber-->
+        <scene sceneID="uMT-b6-ryC">
+            <objects>
+                <controller identifier="Schedule" title="Air Aber" id="Tig-oz-26Q" customClass="ScheduleInterfaceController" customModule="Watch_Extension">
+                    <items>
+                        <table alignment="left" id="6hm-DE-olP">
+                            <items>
+                                <tableRow identifier="FlightRow" id="fgH-m8-GDU" customClass="FlightRowController" customModule="Watch_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" spacing="6" id="O9y-X5-agp">
+                                        <items>
+                                            <separator height="1" heightAdjustment="-4" alignment="left" verticalAlignment="center" id="PkX-As-uab">
+                                                <color key="color" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            </separator>
+                                            <group alignment="left" layout="vertical" spacing="0.0" id="bZ5-Bf-ufZ">
+                                                <items>
+                                                    <group width="1" height="32" alignment="left" spacing="4" id="fSh-gi-MzM">
+                                                        <items>
+                                                            <label alignment="left" verticalAlignment="center" text="MEL" id="KLg-UG-qSs">
+                                                                <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                                                            </label>
+                                                            <imageView width="24" height="20" alignment="center" verticalAlignment="center" image="Plane" id="jmH-Yr-jiF">
+                                                                <color key="tintColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </imageView>
+                                                            <label alignment="right" verticalAlignment="center" text="SFO" id="vpA-Iz-b1N">
+                                                                <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                                                            </label>
+                                                        </items>
+                                                    </group>
+                                                    <group width="1" alignment="left" id="kzd-H7-BHz">
+                                                        <items>
+                                                            <label alignment="left" verticalAlignment="bottom" text="AA123" id="gzF-TV-ZfA">
+                                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                            </label>
+                                                            <label alignment="right" verticalAlignment="bottom" text="On time" id="r2i-g2-Cva">
+                                                                <color key="textColor" red="0.51764705879999995" green="0.64705882349999999" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                            </label>
+                                                        </items>
+                                                    </group>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="destinationLabel" destination="vpA-Iz-b1N" id="T1F-zf-1fj"/>
+                                        <outlet property="flightNumberLabel" destination="gzF-TV-ZfA" id="zMG-nQ-FF9"/>
+                                        <outlet property="originLabel" destination="KLg-UG-qSs" id="Ejr-dq-5CM"/>
+                                        <outlet property="planeImage" destination="jmH-Yr-jiF" id="tLW-0h-XxB"/>
+                                        <outlet property="separator" destination="PkX-As-uab" id="Vsd-0x-T09"/>
+                                        <outlet property="statusLabel" destination="r2i-g2-Cva" id="Mgg-fn-OWY"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="flightsTable" destination="6hm-DE-olP" id="GbH-9n-Opq"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-342" y="-70"/>
+        </scene>
+        <!--CheckIn-->
+        <scene sceneID="HdL-QR-MfY">
+            <objects>
+                <controller identifier="CheckIn" id="BFa-Fh-W0Z" customClass="CheckInInterfaceController" customModule="Watch_Extension">
+                    <items>
+                        <group width="1" height="1" alignment="center" contentMode="center" layout="vertical" id="Qhe-Md-I53">
+                            <items>
+                                <group height="30" alignment="center" spacing="4" id="SFp-nQ-Gzs">
+                                    <items>
+                                        <label alignment="left" verticalAlignment="center" text="MEL" id="mlj-0q-QZA">
+                                            <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                                        </label>
+                                        <imageView width="24" height="20" alignment="left" verticalAlignment="center" image="Plane" id="U27-zn-ux3">
+                                            <color key="tintColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </imageView>
+                                        <label alignment="right" verticalAlignment="center" text="SFO" id="Rck-A3-Ufr">
+                                            <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <button alignment="center" verticalAlignment="center" id="aoO-zh-2lJ">
+                                    <group key="contentGroup" width="78" height="78" alignment="left" radius="39" id="Ihl-3D-GVm">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="Check In" id="XVr-Na-2rs">
+                                                <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                            </label>
+                                        </items>
+                                        <color key="backgroundColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </group>
+                                    <connections>
+                                        <action selector="checkInButtonTapped" destination="BFa-Fh-W0Z" id="V0S-tE-8cq"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="backgroundGroup" destination="Qhe-Md-I53" id="4F3-xg-DOv"/>
+                        <outlet property="destinationLabel" destination="Rck-A3-Ufr" id="4L1-Hq-glR"/>
+                        <outlet property="originLabel" destination="mlj-0q-QZA" id="qpa-az-oBd"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="315" y="-70"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.72151227679999996" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+</document>
